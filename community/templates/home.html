@@ -1,0 +1,33 @@
+{% include 'base.html' %}
+{% include 'navigation.html' %}
+{% load static %}
+{% block content %}
+
+
+<div class="container">
+    <div class="wrapper">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="feauture-box">
+                    <h4 >Welcome to MTRH Community</h4>
+                    <p style="margin-left: 20px;">MTRH Community is dedicated to fostering collaboration among healthcare professionals
+                         through innovative technology. It enhances communication with real-time updates, 
+                         facilitates resource sharing to improve patient care, and offers educational and 
+                         professional development opportunities to advance careers. The community encourages 
+                         engagement through forums and discussions, aiming to create a supportive environment 
+                         within the healthcare community. The mission is to promote collaboration, communication, 
+                         and support among members to ultimately enhance patient outcomes. 
+                        Join MTRH Community today to experience the benefits of collaborative innovation in healthcare.</p>
+                        <a href="{% url 'about' %}" class="btn btn-primary" style="margin-left: 100px;">Read More</a>
+                        <a href="{% url 'login' %}" class="btn btn-primary" style="margin-left: 30px;">Sign Up</a>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <img src="{% static 'images/doctors.png' %}" class="feauture-img">
+            </div>
+        </div>
+    </div>
+</div>
+
+{% include "footer.html" %}
+{% endblock content %}
